@@ -34,4 +34,19 @@ public class Pila {
 
     public boolean estaVacia() { return tope == null; }
     public int getTamano() { return tamano; }
+
+
+        // Muestra la pila en consola, con el tope arriba
+    public void mostrar() {
+        if (estaVacia()) {
+            System.out.println("  [pila vacía]");
+            return;
+        }
+        Nodo actual = tope;
+        while (actual != null) {
+            System.out.println("  | " + actual.getDato() + " |");
+            actual = actual.getSiguiente();
+        }
+        System.out.println("  +---+");
+    }
 }
